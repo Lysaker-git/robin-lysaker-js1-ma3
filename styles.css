@@ -1,0 +1,110 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+    --headerFnt: 'Grandstander', cursive;
+    --bodyfont: 'Manrope', sans-serif;
+}
+
+.loading, .error {
+    color: black;
+    text-transform: uppercase;
+    padding: 2rem;
+    height: 6rem;
+    vertical-align: center;
+    text-align: center;
+    border-radius: .3rem;
+    box-shadow: 3px 3px 4px rgba(0,0,0,.4);
+    width: 100%;
+}
+.loading {
+    background: lightyellow;
+    border: 1px solid rgb(237, 237, 184);
+}
+.error {
+    background: rgb(253, 157, 171);
+    border: 1px solid red;
+
+}
+h1 {
+    padding: 2rem 0;
+}
+body {
+    background: linear-gradient(250deg, rgba(0, 187, 255, 0.659), rgba(255, 0, 0, 0.111) 70.71%),
+    linear-gradient(300deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
+    font-family: var(--bodyfont);
+    margin: 0 auto;
+    max-width: clamp(375px, 100vw, 1600px);
+}
+h1, h2 {
+    font-family: var(--headerFnt);
+    text-transform: uppercase;
+}
+header {
+    position: relative;
+    z-index: 1;
+    background: linear-gradient(rgba(0, 128, 128, 0.33), rgba(173, 216, 230, 0.268));
+    margin-bottom: 2rem;
+    display: grid;
+    place-items: center;
+    box-shadow: 3px 0 10px rgba(0,0,0,.4);
+}
+section, h1 {
+    margin: 0 clamp(2rem, 10vw, 10rem);
+}
+section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    min-height: 100vh;
+}
+.gameCards {
+    color: whitesmoke;
+    flex: 1 1 300px;
+    display: flex;
+    height: 30rem;
+    min-height: fit-content;
+    border-radius: .5rem;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+    box-shadow: 3px 3px 4px rgba(0,0,0,.4);
+}
+.gameCards > div {
+    background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1));
+    padding: 18rem 1rem 1rem 1rem;
+    border-radius: 0 0 .5rem .5rem;
+    margin-top: auto;
+    width: 100%;
+}
+.gameCards > div > p:last-of-type {
+    font-size: .8rem;
+    margin-top: .2rem;
+}
+
+details[open] {
+    overflow-y: scroll;
+    max-height: 5rem;
+}
+details p {
+    margin: .2rem 0;
+    text-transform: capitalize;
+}
+
+footer {
+    height: 5rem;
+    display: grid;
+    place-items: center;
+    background: linear-gradient(rgba(173, 2rgba(0, 128, 128, 0.529)230, 0.494), teal);
+    margin-top: 5rem;
+    box-shadow: 0 -3px 10px rgba(0,0,0,.4);
+}
+@media only screen and (min-width: 1600px) {
+    header {
+        border-radius: 0 0 .5rem .5rem;
+    }
+    footer {
+        border-radius: .5rem .5rem 0 0;
+    }
+}
